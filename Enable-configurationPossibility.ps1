@@ -18,6 +18,8 @@ Set-Location "$home\Downloads"
 Invoke-WebRequest -Uri $url -OutFile $destination
 7z x .\GoogleChromeEnterpriseBundle64.zip -ofolder
 
+Rename-Item ".\folder\" "folderChromeTemplate" 
+
 # Checking if there is a central store folder for .admx and .adml files. If not, it will be created
 if (-not (Test-Path $centralStoreFolder)){
     New-Item $centralStoreFolder -ItemType 'Directory'
@@ -25,5 +27,5 @@ if (-not (Test-Path $centralStoreFolder)){
 }
 
 # Copy chrome .adml and .admx files to the central store folder
-copy-item "C:\Users\$env:USERNAME\Downloads\folder\windows\admx\en-US\chrome.adml" $languageFolder
-copy-item "C:\Users\$env:USERNAME\Downloads\folder\windows\admx\chrome.admx" $centralStoreFolder
+copy-item "C:\Users\$env:USERNAME\Downloads\folderChromeTemplate\windows\admx\en-US\chrome.adml" $languageFolder
+copy-item "C:\Users\$env:USERNAME\Downloads\folderChromeTemplate\windows\admx\chrome.admx" $centralStoreFolder
