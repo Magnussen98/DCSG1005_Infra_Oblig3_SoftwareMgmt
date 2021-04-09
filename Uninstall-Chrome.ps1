@@ -2,7 +2,7 @@ $chromeTemplateDownload = "$HOME\Downloads\GoogleChromeEnterpriseBundle64.zip"
 $chromeTemplateFolder = "$HOME\Downloads\folderChromeTemplate"
 $centralStoreFolder = 'C:\Windows\SYSVOL\domain\Policies\PolicyDefinitions'
 
-#Uninstalls chrome 
+#Uninstalls chrome
 Choco uninstall googleChrome
 
 $folder = "C:\Users\$env:username\AppData\Local\Google"

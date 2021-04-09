@@ -15,4 +15,4 @@ $registryKey = $registrylocations | Get-ChildItem | Where-Object { $_.GetValue('
 $displayName = ($registryKey | Get-ItemProperty).DisplayName
 $version = ($registryKey | Get-ItemProperty).DisplayVersion
 
-Write-Output "Software: $displayName    -->     Version: $version"
+Write-Output "`nSoftware: $displayName    -->     Version: $version`n"

@@ -1,2 +1,2 @@
-## Very simple script which upgrades google chrome 
+## Very simple script which upgrades google chrome
 choco upgrade googlechrome

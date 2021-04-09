@@ -18,7 +18,7 @@ Set-Location "$home\Downloads"
 Invoke-WebRequest -Uri $url -OutFile $destination
 7z x .\GoogleChromeEnterpriseBundle64.zip -ofolder
 
-Rename-Item ".\folder\" "folderChromeTemplate" 
+Rename-Item ".\folder\" "folderChromeTemplate"
 
 # Checking if there is a central store folder for .admx and .adml files. If not, it will be created
 if (-not (Test-Path $centralStoreFolder)){
